@@ -1,14 +1,14 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:correcao_cfc/src/modules/home/view/bloc/menu_bloc.dart';
-import 'package:correcao_cfc/src/modules/home/view/bloc/menu_state.dart';
-import 'package:correcao_cfc/src/modules/home/view/widgets/menu_header.dart';
-import 'package:correcao_cfc/src/modules/home/view/widgets/menu_itens.dart';
-import 'package:correcao_cfc/src/modules/home/view/widgets/menu_loading.dart';
-import 'package:correcao_cfc/src/shared/extension/extension_context.dart';
-import 'package:correcao_cfc/src/theme/app_insets.dart';
-import 'package:correcao_cfc/src/theme/app_radius.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gabarite_cfc/src/modules/home/view/bloc/menu_bloc.dart';
+import 'package:gabarite_cfc/src/modules/home/view/bloc/menu_state.dart';
+import 'package:gabarite_cfc/src/modules/home/view/widgets/menu_header.dart';
+import 'package:gabarite_cfc/src/modules/home/view/widgets/menu_itens.dart';
+import 'package:gabarite_cfc/src/modules/home/view/widgets/menu_loading.dart';
+import 'package:gabarite_cfc/src/shared/extension/extension_context.dart';
+import 'package:gabarite_cfc/src/theme/app_insets.dart';
+import 'package:gabarite_cfc/src/theme/app_radius.dart';
 
 import '../../../../theme/app_colors.dart';
 

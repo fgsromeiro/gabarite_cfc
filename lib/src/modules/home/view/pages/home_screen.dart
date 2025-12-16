@@ -1,4 +1,4 @@
-import 'package:correcao_cfc/src/modules/board/view/pages/panel_board_sm_screen.dart';
+import 'package:gabarite_cfc/src/modules/board/view/pages/panel_board_sm_screen.dart';
 
 import '../../../../shared/export/app_export.dart';
 

@@ -1,6 +1,4 @@
-import 'package:correcao_cfc/src/modules/visibility/view/widgets/visibility_header_content_sm.dart';
-import 'package:correcao_cfc/src/ui/appBar/app_bar_simple.dart';
-import 'package:correcao_cfc/src/ui/drawer/app_drawer.dart';
+import 'package:gabarite_cfc/src/modules/visibility/view/widgets/visibility_header_content_sm.dart';
 
 import '../../../../shared/export/app_export.dart';
 

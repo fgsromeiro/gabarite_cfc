@@ -1,4 +1,4 @@
-import 'package:correcao_cfc/src/shared/responsive/config_responsive/competitor_config.dart';
+import 'package:gabarite_cfc/src/shared/responsive/config_responsive/competitor_config.dart';
 
 import '../export/app_export.dart';
 

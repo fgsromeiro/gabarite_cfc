@@ -1,8 +1,5 @@
-import 'package:correcao_cfc/src/modules/board/view/widgets/fromPanelBoardSmScreen/panel_board_sm_box_info.dart';
-import 'package:correcao_cfc/src/modules/board/view/widgets/fromPanelBoardSmScreen/panel_board_sm_button.dart';
-import 'package:correcao_cfc/src/modules/link/view/widgets/fromPanelLinkSmScreen/panel_link_sm_list.dart';
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
-import 'package:correcao_cfc/src/ui/global/app_divider.dart';
+import 'package:gabarite_cfc/src/modules/link/view/widgets/fromPanelLinkSmScreen/panel_link_sm_list.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 class PanelLinkSmBody extends StatefulWidget {
   const PanelLinkSmBody({super.key});

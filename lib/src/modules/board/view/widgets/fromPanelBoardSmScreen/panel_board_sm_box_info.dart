@@ -1,4 +1,4 @@
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 class PanelBoardSmBoxInfo extends StatelessWidget {
   const PanelBoardSmBoxInfo({super.key, required this.text, this.color});

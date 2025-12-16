@@ -6,7 +6,7 @@
 import 'dart:async' as _i4;
 import 'dart:ui' as _i6;
 
-import 'package:correcao_cfc/src/shared/export/app_export.dart' as _i5;
+import 'package:gabarite_cfc/src/shared/export/app_export.dart' as _i5;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i7;
 import 'package:realtime_client/src/constants.dart' as _i9;

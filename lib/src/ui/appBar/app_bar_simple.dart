@@ -1,4 +1,4 @@
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 class AppBarSimple extends StatelessWidget implements PreferredSizeWidget {
   const AppBarSimple({super.key});

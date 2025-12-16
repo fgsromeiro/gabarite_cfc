@@ -1,6 +1,6 @@
-import 'package:correcao_cfc/src/modules/link/models/link.dart';
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:gabarite_cfc/src/modules/link/models/link.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 void main() {
   late TBL0003 qBase1;

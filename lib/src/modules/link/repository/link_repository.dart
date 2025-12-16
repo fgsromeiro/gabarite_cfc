@@ -1,4 +1,4 @@
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 abstract class LinkRepository {
   Future<List<TBL0002>> findQuestionsByNote(String id);

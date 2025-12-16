@@ -1,9 +1,9 @@
-import 'package:correcao_cfc/src/modules/board/view/pages/panel_board_sm_form_screen.dart';
-import 'package:correcao_cfc/src/modules/board/view/pages/panel_board_sm_screen.dart';
-import 'package:correcao_cfc/src/modules/competitor/view/pages/competitor_board_sm_screen.dart';
-import 'package:correcao_cfc/src/modules/link/view/pages/panel_link_sm_screen.dart';
-import 'package:correcao_cfc/src/modules/setting/view/pages/settings_panel_sm_screen.dart';
-import 'package:correcao_cfc/src/modules/visibility/view/pages/visibility_board_sm_screen.dart';
+import 'package:gabarite_cfc/src/modules/board/view/pages/panel_board_sm_form_screen.dart';
+import 'package:gabarite_cfc/src/modules/board/view/pages/panel_board_sm_screen.dart';
+import 'package:gabarite_cfc/src/modules/competitor/view/pages/competitor_board_sm_screen.dart';
+import 'package:gabarite_cfc/src/modules/link/view/pages/panel_link_sm_screen.dart';
+import 'package:gabarite_cfc/src/modules/setting/view/pages/settings_panel_sm_screen.dart';
+import 'package:gabarite_cfc/src/modules/visibility/view/pages/visibility_board_sm_screen.dart';
 
 import '../shared/export/app_export.dart';
 

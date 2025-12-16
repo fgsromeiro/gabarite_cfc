@@ -1,5 +1,5 @@
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 import '../../../../fixture_reader.dart';
 
@@ -11,6 +11,7 @@ void main() {
     return TBL0006(
       id: baseCompetitorData['id'] as String,
       cf: baseCompetitorData['cf'] as String,
+      official: baseCompetitorData['official'] as String,
       papiro: baseCompetitorData['papiro'] as String,
       granCursos: baseCompetitorData['grancursos'] as String,
       oswaldo: baseCompetitorData['oswaldo'] as String,
@@ -46,6 +47,7 @@ void main() {
       final competitor2 = TBL0006(
         id: 'any_other_id',
         cf: baseCompetitorData['cf'] as String,
+        official: baseCompetitorData['official'] as String,
         papiro: baseCompetitorData['papiro'] as String,
         granCursos: baseCompetitorData['grancursos'] as String,
         oswaldo: baseCompetitorData['oswaldo'] as String,

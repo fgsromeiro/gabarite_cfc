@@ -1,4 +1,4 @@
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 class BoardPanelInfoStatus extends StatelessWidget with ApplicationGlobalMixin {
   const BoardPanelInfoStatus({
@@ -24,10 +24,10 @@ class BoardPanelInfoStatus extends StatelessWidget with ApplicationGlobalMixin {
             isFinished ? Icons.check_circle_outlined : Icons.info_outline,
             color: context.colorScheme.onTertiary,
           ),
-            Text(
-              isFinished ? 'Respondida' : 'Pendente',
-              style: context.theme.textTheme.headlineSmall!.copyWith(color: context.colorScheme.onTertiary),
-            ),
+          Text(
+            isFinished ? 'Respondida' : 'Pendente',
+            style: context.theme.textTheme.headlineSmall!.copyWith(color: context.colorScheme.onTertiary),
+          ),
         ],
       ),
     );

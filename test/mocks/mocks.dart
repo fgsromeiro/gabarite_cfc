@@ -1,4 +1,4 @@
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 const List<Type> mocks = [

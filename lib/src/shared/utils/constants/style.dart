@@ -1,5 +1,5 @@
-// import 'package:correcao_cfc/src/shared/utils/constants/app_colors.dart';
-// import 'package:correcao_cfc/src/shared/utils/constants/size_constants.dart';
+// import 'package:gabarite_cfc/src/shared/utils/constants/app_colors.dart';
+// import 'package:gabarite_cfc/src/shared/utils/constants/size_constants.dart';
 // import 'package:flutter/material.dart';
 
 // class StyleConstants {

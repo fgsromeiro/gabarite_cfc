@@ -1,5 +1,5 @@
-import 'package:correcao_cfc/src/modules/competitor/view/widgets/competitor_header_content_lg.dart';
-import 'package:correcao_cfc/src/modules/competitor/view/widgets/competitor_header_content_sm.dart';
+import 'package:gabarite_cfc/src/modules/competitor/view/widgets/competitor_header_content_lg.dart';
+import 'package:gabarite_cfc/src/modules/competitor/view/widgets/competitor_header_content_sm.dart';
 
 import '../../../../shared/export/app_export.dart';
 

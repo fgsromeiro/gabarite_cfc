@@ -1,5 +1,3 @@
-import 'package:correcao_cfc/src/ui/global/app_divider.dart';
-
 import '../../../../shared/export/app_export.dart';
 
 class CompetitorBoard extends StatelessWidget {

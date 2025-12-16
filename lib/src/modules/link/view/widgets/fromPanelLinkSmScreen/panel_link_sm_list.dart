@@ -1,5 +1,5 @@
-import 'package:correcao_cfc/src/modules/link/view/widgets/fromPanelLinkSmScreen/panel_link_sm_card.dart';
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
+import 'package:gabarite_cfc/src/modules/link/view/widgets/fromPanelLinkSmScreen/panel_link_sm_card.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 class PanelLinkSmList extends StatefulWidget {
   const PanelLinkSmList({super.key});

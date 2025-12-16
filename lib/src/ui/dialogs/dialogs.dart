@@ -1,5 +1,5 @@
-import 'package:correcao_cfc/src/ui/dialogs/app_list_questions_reference_modal.dart';
-import 'package:correcao_cfc/src/ui/dialogs/app_search_simple_modal.dart';
+import 'package:gabarite_cfc/src/ui/dialogs/app_list_questions_reference_modal.dart';
+import 'package:gabarite_cfc/src/ui/dialogs/app_search_simple_modal.dart';
 
 import '../../shared/export/app_export.dart';
 

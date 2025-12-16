@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ManagerSupabaseImpl implements DataManager<SupabaseDTO> {

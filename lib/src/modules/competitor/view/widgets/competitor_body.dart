@@ -1,4 +1,4 @@
-import 'package:correcao_cfc/src/modules/competitor/view/widgets/table_analyzer_competitor.dart';
+import 'package:gabarite_cfc/src/modules/competitor/view/widgets/table_analyzer_competitor.dart';
 
 import '../../../../shared/export/app_export.dart';
 

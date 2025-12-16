@@ -1,7 +1,6 @@
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter_test/flutter_test.dart';
-
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 import '../../../../fixture_reader.dart';
 import '../../../../mocks/mocks.mocks.dart';

@@ -1,6 +1,4 @@
-import 'package:correcao_cfc/src/shared/export/app_export.dart';
-import 'package:correcao_cfc/src/ui/appBar/app_bar_simple.dart';
-import 'package:correcao_cfc/src/ui/drawer/app_drawer.dart';
+import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 class CompetitorBoardSmScreen extends StatelessWidget {
   const CompetitorBoardSmScreen({super.key});
