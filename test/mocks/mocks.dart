@@ -1,0 +1,46 @@
+import 'package:correcao_cfc/src/shared/export/app_export.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+const List<Type> mocks = [
+  ApplicationGlobalMixin,
+  SupabaseClient,
+  RealtimeChannel,
+  AuthResponse,
+  SupabaseQueryBuilder,
+  PostgrestFilterBuilder,
+  PostgrestTransformBuilder,
+  GoTrueClient,
+  Connectivity,
+  NetworkInfo,
+  NetworkVerifier,
+  AuthManager,
+  DataManager,
+  FunctionDatabase,
+  RealtimeManager,
+  User,
+  AuthRepository,
+  AuthService,
+  StorageService,
+  PermissionService,
+  PermissionRepository,
+  AuthBloc,
+  AuthFormBloc,
+  NavigatorObserver,
+  Dialogs,
+  BoardRepository,
+  BoardService,
+  NoteRepository,
+  NoteService,
+  LinkRepository,
+  LinkService,
+  CompetitorRepository,
+  CompetitorService,
+  StreamSubscription<TBL0006>,
+  SettingRepository,
+  SettingService,
+  VisibilityRepository,
+  VisibilityService,
+];
+
+@GenerateMocks(mocks)
+void main() {}

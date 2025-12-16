@@ -1,0 +1,24 @@
+{
+    "competitors": [
+        {
+            "id": "any_id",
+            "cf": "A",
+            "papiro": "A",
+            "grancursos": "A",
+            "oswaldo": "A",
+            "estrategia": "A",
+            "idnote": "note_id",
+            "index": 2
+        },
+        {
+            "id": "any_id",
+            "cf": "A",
+            "papiro": "A",
+            "grancursos": "A",
+            "oswaldo": "A",
+            "estrategia": "A",
+            "idnote": "note_id",
+            "index": 1
+        }
+    ]
+}

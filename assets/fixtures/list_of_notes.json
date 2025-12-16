@@ -1,0 +1,24 @@
+{
+    "notes": [
+        {
+            "id": "1",
+            "title": "Tipo 1",
+            "isReference": true
+        },
+        {
+            "id": "2",
+            "title": "Tipo 2",
+            "isReference": false
+        },
+        {
+            "id": "3",
+            "title": "Tipo 3",
+            "isReference": false
+        },
+        {
+            "id": "4",
+            "title": "Tipo 4",
+            "isReference": false
+        }
+    ]
+}

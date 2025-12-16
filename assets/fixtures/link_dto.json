@@ -1,0 +1,14 @@
+{
+  "idQuestion": "any_idQuestion",
+  "qBase": {
+    "id": "any_id",
+    "title": "any_title",
+    "alternative": "any_alternative",
+    "visible": false,
+    "idNote": null,
+    "enunciated": "any_enunciated",
+    "teacher": "any_teacher",
+    "textAlternative": "any_text_alternative",
+    "index": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "idQuestionBase": "any_id_base",
+    "id": "any_id",
+    "title": "any_title",
+    "alternative": "any_alternative",
+    "index": 1,
+    "visible": true,
+    "idNote": "any_id_note",
+    "enunciated": "any_enunciated",
+    "teacher": "any_teacher",
+    "textAlternative": "any_text_alternative"
+}
