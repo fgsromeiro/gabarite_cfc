@@ -17,6 +17,7 @@ class AuthState extends Equatable {
   final AuthManagerDTO? dto;
   final UserModel? user;
   final String? message;
+  
 
   const AuthState({
     required this.status,

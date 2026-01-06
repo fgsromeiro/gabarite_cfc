@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/models/question.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/widgets/panel_template_item.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/widgets/panel_template_title_left.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/widgets/panel_template_title_rigth.dart';
-import 'package:gabarite_board_cfc/src/shared/extension/extension_context.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 class PanelTemplateNote extends StatelessWidget {
   const PanelTemplateNote({

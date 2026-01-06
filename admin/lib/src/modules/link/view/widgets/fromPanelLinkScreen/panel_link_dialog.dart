@@ -131,7 +131,7 @@ class _PanelLinkDialogState extends State<PanelLinkDialog> with ApplicationGloba
                                 color: context.colorScheme.onSecondaryFixedVariant,
                               ),
                               Text(
-                                '${question.alternative}) ${question.alternative}',
+                                '${question.alternative}) ${question.textAlternative}',
                                 style: context.theme.textTheme.headlineSmall!.copyWith(
                                   color: context.colorScheme.onTertiary,
                                 ),

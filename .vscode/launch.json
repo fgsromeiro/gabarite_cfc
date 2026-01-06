@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Web - Board",
+            "request": "launch",
+            "type": "dart",
+            "program": "board/lib/main.dart",
+            "args": [
+                "-d",
+                "chrome",
+            ],
+        },
+        {
+            "name": "Web - Admin",
+            "request": "launch",
+            "type": "dart",
+            "program": "admin/lib/main.dart",
+            "args": [
+                "-d",
+                "chrome",
+            ],
+        },
+        {
+            "name": "Mobile - Admin",
+            "request": "launch",
+            "type": "dart",
+            "program": "admin/lib/main.dart",
+            "flutterMode": "debug",
+        },
+    ]
+}

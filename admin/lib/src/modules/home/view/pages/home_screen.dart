@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             controller: _tabController,
                             children: [
                               PanelBoard(),
-                              PanelLinkScreen(),
+                              PanelLink(),
                               CompetitorBoard(),
                               VisibilityBoard(),
                               SettingsPanel(),

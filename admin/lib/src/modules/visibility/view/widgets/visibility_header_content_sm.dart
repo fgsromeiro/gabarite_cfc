@@ -7,7 +7,7 @@ class VisibilityHeaderContentSm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final url = 'https://painel-correcao.vercel.app';
+    final url = 'https://quadro-correcao-cfc.globeapp.dev';
     final permission = context.read<MenuBloc>().state.permission;
 
     return BlocBuilder<VisibilityBloc, VisibilityState>(
@@ -41,7 +41,7 @@ class VisibilityHeaderContentSm extends StatelessWidget {
               PopupMenuButton(
                 itemBuilder: (context) {
                   return [
-                    if (permission.isAdmin)
+                    if (permission.isAdmin && !context.isMobile)
                       PopupMenuItem(
                         onTap: () {
                           final uri = Uri.parse(url);

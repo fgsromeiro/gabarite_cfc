@@ -13,7 +13,7 @@ class ManagerSupabaseImpl implements DataManager<SupabaseDTO> {
   @override
   Future<void> create({required SupabaseDTO dto}) async {
     try {
-      await _client.from(dto.table).insert(dto);
+      await _client.from(dto.table).insert(dto.data);
       return;
     } catch (e) {
       log('MESSAGE -> $e');

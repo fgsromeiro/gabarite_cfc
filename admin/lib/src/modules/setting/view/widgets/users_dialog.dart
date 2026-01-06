@@ -26,6 +26,7 @@ class UsersDialog extends StatelessWidget {
         height: context.sz.height * 0.5,
         width: context.sz.width * 0.4,
         child: BlocConsumer<SettingBloc, SettingState>(
+          bloc: context.read<SettingBloc>()..load(),
           listener: (context, state) {
             if (state.status.isError) {
               Dialogs.showDialogMessage(
@@ -38,11 +39,13 @@ class UsersDialog extends StatelessWidget {
               Dialogs.showDialogMessage(
                 context,
                 message: 'Permissão atualizada com sucesso!',
-                color: context.colorScheme.primary,
+                color: context.colorScheme.onPrimary,
               );
             }
           },
           builder: (context, state) {
+            if (state.status.isLoading) return AppLoadingIndicator();
+            
             return ListView.builder(
               itemCount: state.users.length,
               itemBuilder: (context, index) {

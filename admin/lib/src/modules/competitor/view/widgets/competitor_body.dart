@@ -39,24 +39,4 @@ class _CompetitorsBodyState extends State<CompetitorsBody> {
       },
     );
   }
-
-  Widget _iconIndicator(BuildContext context, {required CompetitorState state, required TBL0006 competitor}) {
-    if (competitor.cf.isNotEmpty && competitor.validate) {
-      return Icon(Icons.check_circle_outline, color: context.colorScheme.onPrimary);
-    } else if (competitor.cf.isNotEmpty && competitor.isNotEmptyAll) {
-      return Icon(Icons.error_outline, color: context.colorScheme.error);
-    }
-
-    return const SizedBox.shrink();
-  }
-
-  Color? _validateWithColorRow(BuildContext context, {required TBL0006 competitor}) {
-    if (competitor.cf.isNotEmpty && competitor.validate) {
-      return context.colorScheme.onPrimary.withAlpha(40);
-    } else if (competitor.cf.isNotEmpty && competitor.isNotEmptyAll) {
-      return context.colorScheme.error.withAlpha(40);
-    }
-
-    return null;
-  }
 }

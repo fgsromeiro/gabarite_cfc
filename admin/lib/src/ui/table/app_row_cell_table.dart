@@ -67,9 +67,8 @@ class AppRowCellTable {
         child: SizedBox(
             width: context.sz.width * fator,
             child: TextField(
-              focusNode: focusNode,
               controller: controller,
-              // onChanged: onChanged,
+              onChanged: onChanged,
               onSubmitted: onChanged,
               onTapOutside: (event) => onChanged?.call(controller.text),
               inputFormatters: [

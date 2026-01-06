@@ -75,7 +75,14 @@ class AuthBloc extends Cubit<AuthState> {
 
       final newUser = await service.signUp(model);
       await permissionService.createPermission(
-          TBL0004(id: '', user: newUser.id, type: 'professor', email: newUser.email, name: newUser.name));
+        TBL0004(
+          id: '',
+          user: newUser.id,
+          type: 'professor',
+          email: newUser.email,
+          name: newUser.name,
+        ),
+      );
 
       emit(state.copyWith(status: AuthStatus.logged, user: newUser));
 

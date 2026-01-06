@@ -1,3 +1,4 @@
+import 'package:gabarite_cfc/src/shared/utils/env.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class SupabaseInitializer {
@@ -5,8 +6,8 @@ class SupabaseInitializer {
 
   static Future<SupabaseClient> create() async {
     await Supabase.initialize(
-      url: 'https://mpjuquwxwehyqpuquyql.supabase.co',
-      anonKey: 'sb_publishable_D6tcHPNORMRLVKefH9gYqQ_wmcIq3ov',
+      url: Env.urlSupabase,
+      anonKey: Env.apiKey,
       debug: true,
     );
 

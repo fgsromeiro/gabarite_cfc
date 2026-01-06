@@ -13,7 +13,7 @@ class Dialogs {
       barrierDismissible: barrierDismissible,
       barrierLabel: 'dismiss',
       context: context,
-      barrierColor: context.theme.colorScheme.onPrimaryFixed,
+      barrierColor: context.theme.colorScheme.onPrimaryFixed.withAlpha(200),
       transitionDuration: Duration(milliseconds: 600),
       transitionBuilder: (_, a1, a2, child) {
         return ScaleTransition(

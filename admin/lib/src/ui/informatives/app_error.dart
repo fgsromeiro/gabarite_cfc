@@ -25,10 +25,7 @@ class AppError extends StatelessWidget {
             child: Text(
               message,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 16,
-                color: AppColors.primary,
-              ),
+              style: context.theme.textTheme.titleMedium!.copyWith(color: context.colorScheme.onSecondaryFixedVariant),
             ),
           ),
         ],

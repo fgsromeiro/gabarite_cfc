@@ -50,7 +50,7 @@ class CompetitorRepositoryImpl implements CompetitorRepository {
         dto: SupabaseDTO(
           table: SupabaseUtils.kTBL0006,
           data: {},
-          column: 'idnote',
+          column: 'idNote',
           value: idNote,
         ),
       );

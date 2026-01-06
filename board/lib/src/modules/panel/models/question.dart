@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+import '../../../shared/export/app_export.dart';
 
 enum TypeNote { typeOne, typeTwo, typeTree, typeFour }
 
@@ -45,19 +45,6 @@ class Question extends Equatable {
         textAlternative: '',
       );
 
-  Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'idQuestionBase': idQuestionBase,
-      'id': id,
-      'alternative': alternative,
-      'visible': visible,
-      'idNote': idNote,
-      'enunciated': enunciated,
-      'teacher': teacher,
-      'textAlternative': textAlternative,
-    };
-  }
-
   factory Question.fromMap(Map<String, dynamic> map) {
     return Question(
       idQuestionBase: map['idQuestionBase'] != null ? map['idQuestionBase'] as String : '',
@@ -100,18 +87,6 @@ class Question extends Equatable {
   }
 
   @override
-  List<Object> get props {
-    return [
-      idQuestionBase,
-      id,
-      title,
-      alternative,
-      index,
-      visible,
-      idNote,
-      teacher,
-      enunciated,
-      textAlternative,
-    ];
-  }
+  List<Object> get props =>
+      [idQuestionBase, id, title, alternative, index, visible, idNote, teacher, enunciated, textAlternative];
 }

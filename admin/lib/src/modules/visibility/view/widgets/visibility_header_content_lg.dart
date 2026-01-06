@@ -7,7 +7,7 @@ class VisibilityHeaderContentLg extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final url = 'https://painel-correcao.vercel.app';
+    final url = 'https://quadro-correcao-cfc.globeapp.dev';
     final permission = context.read<MenuBloc>().state.permission;
 
     return BlocBuilder<VisibilityBloc, VisibilityState>(

@@ -34,9 +34,8 @@ class TBL0004 extends Equatable {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'id': int.tryParse(id) ?? 0,
       'type': type.toLowerCase(),
-      'user_id': user,
+      'user': user,
       'email': email,
       'name': name,
     };
@@ -44,8 +43,8 @@ class TBL0004 extends Equatable {
 
   factory TBL0004.fromMap(Map<String, dynamic> map) {
     return TBL0004(
-      id: (map['id'] as int).toString(),
-      user: map['user_id'] as String,
+      id: map['id'] as String,
+      user: map['user'] as String,
       type: map['type'] as String,
       email: map['email'] as String,
       name: map['name'] as String,
@@ -69,7 +68,7 @@ class TBL0004 extends Equatable {
   }
 
   @override
-  List<Object> get props {
+  List<Object?> get props {
     return [
       id,
       user,

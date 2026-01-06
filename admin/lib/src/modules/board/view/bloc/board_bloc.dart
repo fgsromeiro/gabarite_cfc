@@ -64,17 +64,12 @@ class BoardBloc extends Cubit<BoardState> with ApplicationGlobalMixin {
 
   void search(String? value) {
     if (value == null || value.isEmpty) {
-      emit(
-        state.copyWith(
-          listFiltered: state.listOfQuestionsAll.toList(),
-          status: BoardStatus.loaded,
-        ),
-      );
+      filterBy(state.filterBy);
     } else {
       emit(
         state.copyWith(
           listFiltered: filterListOfQuestionReferenceBySearch(
-            state.listOfQuestionsAll.toList(),
+            listByFilter(state.listOfQuestionsAll, state.filterBy),
             value,
           ),
           status: BoardStatus.loaded,
@@ -84,14 +79,14 @@ class BoardBloc extends Cubit<BoardState> with ApplicationGlobalMixin {
   }
 
   Future<void> filterBy(FilterQuestion filter) async {
-    final question = state.listOfQuestionsAll.toList();
+    final questions = state.listOfQuestionsAll.toList();
 
-    if (filter == FilterQuestion.all) {
-      emit(state.copyWith(listFiltered: question, status: BoardStatus.loaded));
-    } else if (filter == FilterQuestion.answered) {
-      emit(state.copyWith(listFiltered: question.where((q) => q.isFilled).toList(), status: BoardStatus.loaded));
-    } else if (filter == FilterQuestion.notAnswered) {
-      emit(state.copyWith(listFiltered: question.where((q) => !q.isFilled).toList(), status: BoardStatus.loaded));
-    }
+    emit(
+      state.copyWith(
+        listFiltered: listByFilter(questions, filter),
+        status: BoardStatus.loaded,
+        filterBy: filter,
+      ),
+    );
   }
 }

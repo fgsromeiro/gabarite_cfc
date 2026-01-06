@@ -5,7 +5,7 @@ class TBL0005 {
 
   factory TBL0005.fromMap(Map<String, dynamic> map) {
     return TBL0005(
-      showButtons: map['showButtons'] ?? false,
+      showButtons: map['showButton'] ?? false,
     );
   }
 
@@ -13,7 +13,7 @@ class TBL0005 {
 
   Map<String, dynamic> toMap() {
     return {
-      'showButtons': showButtons,
+      'showButton': showButtons,
     };
   }
 }

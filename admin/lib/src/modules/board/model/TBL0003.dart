@@ -2,6 +2,19 @@ import 'package:gabarite_cfc/src/shared/export/app_export.dart';
 
 enum FilterQuestion { all, answered, notAnswered }
 
+extension FilterQuestionExtension on FilterQuestion {
+  String get label {
+    switch (this) {
+      case FilterQuestion.all:
+        return 'Todas';
+      case FilterQuestion.answered:
+        return 'Respondidas';
+      case FilterQuestion.notAnswered:
+        return 'Pendentes';
+    }
+  }
+}
+
 class TBL0003 extends Question {
   final String teacher;
 

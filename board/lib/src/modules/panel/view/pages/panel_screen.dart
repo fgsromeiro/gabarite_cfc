@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/bloc/panel_bloc.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/bloc/panel_state.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/widgets/panel_body.dart';
-import 'package:gabarite_board_cfc/src/ui/informatives/app_loading_indicator.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 class PanelScreen extends StatefulWidget {
   const PanelScreen({super.key});

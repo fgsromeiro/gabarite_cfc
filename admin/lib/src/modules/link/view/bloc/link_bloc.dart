@@ -37,6 +37,8 @@ class LinkBloc extends Cubit<LinkState> with ApplicationGlobalMixin {
 
   Future<void> loadQuestionsByNote(TBL0001 note) async {
     try {
+      if (note.id.isEmpty) return load();
+
       emit(state.copyWith(status: LinkStatus.finding));
 
       final questions = await linkService.findQuestionsByNote(note.id);

@@ -73,79 +73,10 @@ class _AuthBodyState extends State<AuthBody> {
                                 spacing: AppSpacing.med,
                                 children: [
                                   AnimatedCrossFade(
-                                    duration: const Duration(milliseconds: 300),
-                                    firstChild: LoginForm(key: AppKeysForms.formLoginKey),
-                                    secondChild: RegisterForm(key: AppKeysForms.formRegisterKey),
                                     crossFadeState: isFormLogin ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                                  ),
-                                  SizedBox(
-                                    width: double.infinity,
-                                    child: AppConditionalWidget(
-                                      condition: isFormLogin,
-                                      firstChild: AppButton(
-                                        title: 'ACESSAR',
-                                        isLoading: state.status.isLogging,
-                                        backgroundColor:
-                                            isFormLogin ? context.colorScheme.secondary : context.colorScheme.surface,
-                                        borderColor: isFormLogin
-                                            ? context.colorScheme.secondary
-                                            : context.colorScheme.onTertiary,
-                                        titleColor:
-                                            isFormLogin ? context.colorScheme.primary : context.colorScheme.onTertiary,
-                                        onPressed: () {
-                                          if (!isFormLogin) return toggleForm(true);
-
-                                          if (AppKeysForms.formLoginKey.currentState!.validate()) {
-                                            final state = context.read<AuthFormBloc>().state;
-
-                                            _bloc.login(
-                                              AuthManagerDTO(
-                                                email: state.email,
-                                                password: state.password,
-                                              ),
-                                            );
-                                          } else {
-                                            Dialogs.showDialogMessage(
-                                              context,
-                                              message: 'Verifique suas credeciais',
-                                              color: context.colorScheme.error,
-                                            );
-                                          }
-                                        },
-                                      ),
-                                      secondChild: AppButton(
-                                        title: 'CADASTRAR',
-                                        isLoading: state.status.isRegistering,
-                                        backgroundColor:
-                                            !isFormLogin ? context.colorScheme.secondary : context.colorScheme.surface,
-                                        borderColor: !isFormLogin
-                                            ? context.colorScheme.secondary
-                                            : context.colorScheme.onTertiary,
-                                        titleColor:
-                                            !isFormLogin ? context.colorScheme.primary : context.colorScheme.onTertiary,
-                                        onPressed: () {
-                                          if (isFormLogin) return toggleForm(false);
-
-                                          if (AppKeysForms.formRegisterKey.currentState!.validate()) {
-                                            final state = context.read<AuthFormBloc>().state;
-
-                                            _bloc.signUp(
-                                              AuthManagerDTO(
-                                                email: state.email,
-                                                password: state.password,
-                                                name: state.name,
-                                              ),
-                                            );
-                                          } else {
-                                            Dialogs.showDialogMessage(
-                                              context,
-                                              message: 'Verifique suas credeciais',
-                                              color: context.colorScheme.error,
-                                            );
-                                          }
-                                        },
-                                      ),
-                                    ),
+                                    duration: const Duration(milliseconds: 300),
+                                    firstChild: LoginForm(),
+                                    secondChild: RegisterForm(),
                                   ),
                                   SizedBox(
                                     width: double.infinity,

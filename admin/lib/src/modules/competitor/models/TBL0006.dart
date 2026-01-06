@@ -49,7 +49,7 @@ class TBL0006 extends Equatable {
       'grancursos': granCursos,
       'oswaldo': oswaldo,
       'estrategia': estrategia,
-      'idnote': idNote,
+      'idNote': idNote,
       'index': index,
     };
   }
@@ -63,7 +63,7 @@ class TBL0006 extends Equatable {
       granCursos: map['grancursos'] != null ? map['grancursos'] as String : '',
       oswaldo: map['oswaldo'] != null ? map['oswaldo'] as String : '',
       estrategia: map['estrategia'] != null ? map['estrategia'] as String : '',
-      idNote: map['idnote'] != null ? map['idnote'] as String : '',
+      idNote: map['idNote'] != null ? map['idNote'] as String : '',
       index: map['index'] != null ? map['index'] as int : 0,
     );
   }

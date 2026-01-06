@@ -34,7 +34,7 @@ class TBL0002 extends TBL0003 {
   @override
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'idQuestionBase': idQuestionBase,
+      'idQuestionReference': idQuestionBase,
       'id': id,
       'alternative': alternative,
       'visible': visible,
@@ -47,7 +47,7 @@ class TBL0002 extends TBL0003 {
 
   factory TBL0002.fromMap(Map<String, dynamic> map) {
     return TBL0002(
-      idQuestionBase: map['idQuestionBase'] != null ? map['idQuestionBase'] as String : '',
+      idQuestionBase: map['idQuestionReference'] != null ? map['idQuestionReference'] as String : '',
       id: map['id'] as String,
       title: map['title'] as String,
       alternative: map['alternative'] != null ? map['alternative'] as String : '',

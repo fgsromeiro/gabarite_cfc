@@ -20,7 +20,7 @@ class FunctionLinkDTO {
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'id': id,
-      'idQuestionBase': idQuestionbase,
+      'idQuestionReference': idQuestionbase,
       'enunciated': enunciated,
       'alternative': alternative,
       'textAlternative': textAlternative,

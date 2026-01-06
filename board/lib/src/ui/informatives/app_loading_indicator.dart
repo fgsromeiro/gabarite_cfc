@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gabarite_board_cfc/src/shared/extension/extension_context.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 class AppLoadingIndicator extends StatelessWidget {
   AppLoadingIndicator({

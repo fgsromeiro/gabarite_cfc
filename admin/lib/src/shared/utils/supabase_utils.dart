@@ -5,7 +5,7 @@ class SupabaseUtils {
   static String get kTBL0004 => 'TBL0004';
   static String get kTBL0005 => 'TBL0005';
   static String get kTBL0006 => 'TBL0006';
-  static String get updateNoteRPC => 'update_notes';
+  static String get functionUpdateNoteRPC => 'update_notes';
   static String get updateQuestionsRPC => 'update_questions';
   static String get linkRPC => 'link_questions';
   static String get removeLinkRPC => 'remove_link_questions';

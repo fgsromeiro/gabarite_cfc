@@ -17,8 +17,8 @@ class TableAnalyzerCompetitor extends StatelessWidget {
           width: double.infinity,
           columns: [
             AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'QUESTÃO'),
-            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'OFICIAL'),
             AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'CF'),
+            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'OFICIAL'),
             AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'PAPIRO'),
             AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'GRAN CURSOS'),
             AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'OSWALDO'),
@@ -27,65 +27,61 @@ class TableAnalyzerCompetitor extends StatelessWidget {
           rows: [
             ...competitors.map(
               (c) {
-                return DataRow(
-                    color: WidgetStatePropertyAll(
-                      _validateWithColorRow(context, competitor: c),
-                    ),
-                    cells: [
-                      AppRowCellTable.create(
-                        context,
-                        title: '${c.index}',
-                      ),
-                      AppRowCellTable.create(
-                        context,
-                        title: c.cf,
-                      ),
-                      AppRowCellTable.field(
-                        context,
-                        title: c.official,
-                        fator: config.fatorScaleField,
-                        onChanged: (value) {
-                          c.setOfficial(value);
-                          bloc.update(c);
-                        },
-                      ),
-                      AppRowCellTable.field(
-                        context,
-                        title: c.papiro,
-                        fator: config.fatorScaleField,
-                        onChanged: (value) {
-                          c.setPapiro(value);
-                          bloc.update(c);
-                        },
-                      ),
-                      AppRowCellTable.field(
-                        context,
-                        title: c.granCursos,
-                        fator: config.fatorScaleField,
-                        onChanged: (value) {
-                          c.setGranCursos(value);
-                          bloc.update(c);
-                        },
-                      ),
-                      AppRowCellTable.field(
-                        context,
-                        title: c.oswaldo,
-                        fator: config.fatorScaleField,
-                        onChanged: (value) {
-                          c.setOswaldo(value);
-                          bloc.update(c);
-                        },
-                      ),
-                      AppRowCellTable.field(
-                        context,
-                        title: c.estrategia,
-                        fator: config.fatorScaleField,
-                        onChanged: (value) {
-                          c.setEstrategia(value);
-                          bloc.update(c);
-                        },
-                      ),
-                    ]);
+                return DataRow(color: WidgetStatePropertyAll(_validateWithColorRow(context, competitor: c)), cells: [
+                  AppRowCellTable.create(
+                    context,
+                    title: '${c.index}',
+                  ),
+                  AppRowCellTable.create(
+                    context,
+                    title: c.cf,
+                  ),
+                  AppRowCellTable.field(
+                    context,
+                    title: c.official,
+                    fator: config.fatorScaleField,
+                    onChanged: (value) {
+                      c.setOfficial(value);
+                      bloc.update(c);
+                    },
+                  ),
+                  AppRowCellTable.field(
+                    context,
+                    title: c.papiro,
+                    fator: config.fatorScaleField,
+                    onChanged: (value) {
+                      c.setPapiro(value);
+                      bloc.update(c);
+                    },
+                  ),
+                  AppRowCellTable.field(
+                    context,
+                    title: c.granCursos,
+                    fator: config.fatorScaleField,
+                    onChanged: (value) {
+                      c.setGranCursos(value);
+                      bloc.update(c);
+                    },
+                  ),
+                  AppRowCellTable.field(
+                    context,
+                    title: c.oswaldo,
+                    fator: config.fatorScaleField,
+                    onChanged: (value) {
+                      c.setOswaldo(value);
+                      bloc.update(c);
+                    },
+                  ),
+                  AppRowCellTable.field(
+                    context,
+                    title: c.estrategia,
+                    fator: config.fatorScaleField,
+                    onChanged: (value) {
+                      c.setEstrategia(value);
+                      bloc.update(c);
+                    },
+                  ),
+                ]);
               },
             )
           ],

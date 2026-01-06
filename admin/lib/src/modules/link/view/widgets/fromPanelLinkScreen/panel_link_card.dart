@@ -20,10 +20,7 @@ class PanelLinkCard extends StatelessWidget with ApplicationGlobalMixin {
             getQustionBaseReference(id: question.idQuestionBase, listOfQuestionsBase: state.questionsRefs);
         return Container(
           width: double.infinity,
-          padding: EdgeInsets.symmetric(
-            horizontal: context.sz.width * 0.02,
-            vertical: context.sz.height * 0.04,
-          ),
+          padding: EdgeInsets.all(AppInsets.med),
           decoration: BoxDecoration(
             border: Border.all(
               color: question.idQuestionBase.isEmpty
@@ -31,9 +28,9 @@ class PanelLinkCard extends StatelessWidget with ApplicationGlobalMixin {
                   : context.colorScheme.onPrimary,
               width: 1,
             ),
-            borderRadius: BorderRadius.circular(AppRadius.xlg),
+            borderRadius: BorderRadius.circular(AppRadius.lg),
           ),
-          margin: EdgeInsets.only(bottom: 10),
+          margin: EdgeInsets.only(bottom: AppInsets.med),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,12 +55,12 @@ class PanelLinkCard extends StatelessWidget with ApplicationGlobalMixin {
                     ],
                   ),
                   Container(
-                    padding: EdgeInsets.all(AppInsets.med),
+                    padding: EdgeInsets.all(AppInsets.sm),
                     decoration: BoxDecoration(
                       color: question.idQuestionBase.isEmpty
                           ? context.colorScheme.onSecondaryFixedVariant
                           : context.colorScheme.onPrimary,
-                      borderRadius: BorderRadius.circular(AppRadius.lg),
+                      borderRadius: BorderRadius.circular(AppRadius.full),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -111,6 +108,8 @@ class PanelLinkCard extends StatelessWidget with ApplicationGlobalMixin {
                         child: AppIconButton(
                           tooltipMessage: 'Vincular questão',
                           icon: Icons.link,
+                          borderColor: context.colorScheme.onSecondaryFixedVariant,
+                          overlayColor: context.colorScheme.secondary,
                           backgroundColor: context.colorScheme.surface,
                           color: context.colorScheme.onSecondaryFixedVariant,
                           onPressed: () {
@@ -134,6 +133,8 @@ class PanelLinkCard extends StatelessWidget with ApplicationGlobalMixin {
                         child: AppIconButton(
                           tooltipMessage: 'Remover vínculo',
                           icon: Icons.close,
+                          borderColor: context.colorScheme.onSecondaryFixedVariant,
+                          overlayColor: context.colorScheme.secondary,
                           backgroundColor: context.colorScheme.surface,
                           color: context.colorScheme.onSecondaryFixedVariant,
                           onPressed: () {

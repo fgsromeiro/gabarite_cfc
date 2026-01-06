@@ -81,7 +81,7 @@ class PermissionRepositoryImpl implements PermissionRepository {
           value: permission.user,
           table: SupabaseUtils.kTBL0004,
           data: permission.toMap(),
-          column: 'user_id',
+          column: 'user',
         ),
       );
 

@@ -1,12 +1,6 @@
 import 'dart:developer';
 
-import 'package:flutter/material.dart';
-import 'package:gabarite_board_cfc/src/shared/extension/extension_context.dart';
-import 'package:gabarite_board_cfc/src/shared/responsive/responsive_grid_view.dart';
-import 'package:gabarite_board_cfc/src/shared/responsive/responsive_panel.dart';
-import 'package:gabarite_board_cfc/src/theme/app_font_size.dart';
-import 'package:gabarite_board_cfc/src/theme/app_insets.dart';
-import 'package:gabarite_board_cfc/src/theme/app_spacing.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 class UiConfigurations {
   final BuildContext context;
@@ -17,7 +11,7 @@ class UiConfigurations {
     if (context.isSmall) {
       log('DISPLAY WIDTH -> SMALL');
       _small();
-    } else if (context.isMedium) {
+    } else if (context.isMobile) {
       log('DISPLAY WIDTH -> MEDIUM');
       _medium();
     } else if (context.isLarge) {
@@ -25,7 +19,7 @@ class UiConfigurations {
       _large();
     } else if (context.isXLarge) {
       log('DISPLAY WIDTH -> XLARGE');
-      _extraLarge();
+      _xLarge();
     } else if (context.isXXLarge) {
       log('DISPLAY WIDTH -> XXLARGE');
       _xxLarge();
@@ -53,34 +47,45 @@ class UiConfigurations {
     AppInsets.scale = 1.5;
     AppFontSize.scale = 0.8;
     AppSpacing.scale = 1.5;
-    responsivePanel = ResponsivePanel(factorWidth: 0.56);
+    responsivePanel = ResponsivePanel(factorWidth: 0.58);
     gridView = ResponsiveGridView(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 10,
-        mainAxisExtent: 68.5,
+        mainAxisExtent: 67,
         crossAxisSpacing: 2,
       ),
       padding: EdgeInsetsGeometry.all(15),
     );
   }
 
-  void _extraLarge() {
+  void _xLarge() {
     AppInsets.scale = 1.4;
     AppFontSize.scale = 0.7;
     AppSpacing.scale = 1.5;
-    responsivePanel = ResponsivePanel(factorWidth: 0.56);
+    responsivePanel = ResponsivePanel(factorWidth: 0.60);
     gridView = ResponsiveGridView(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 10,
-        mainAxisExtent: 56,
+        mainAxisExtent: 61,
         crossAxisSpacing: 2,
       ),
-      padding: EdgeInsetsGeometry.all(15),
+      padding: EdgeInsetsGeometry.all(13),
     );
   }
 
   void _large() {
-    AppFontSize.scale = 1.5;
+    AppInsets.scale = 1.4;
+    AppFontSize.scale = 0.7;
+    AppSpacing.scale = 1.5;
+    responsivePanel = ResponsivePanel(factorWidth: 0.60);
+    gridView = ResponsiveGridView(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 10,
+        mainAxisExtent: 61,
+        crossAxisSpacing: 2,
+      ),
+      padding: EdgeInsetsGeometry.all(13),
+    );
   }
 
   void _medium() {

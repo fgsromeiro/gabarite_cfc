@@ -62,9 +62,9 @@ class SettingRepositoryImpl implements SettingRepository {
         column: 'id',
       );
 
-      final response = await dataManager.findAll(dto: dto);
+      final response = await dataManager.findById(dto: dto);
 
-      return response.isNotNull && response.isNotEmpty ? TBL0005.fromMap(response.first) : null;
+      return TBL0005.fromMap(response!);
     } on CustomException {
       rethrow;
     }

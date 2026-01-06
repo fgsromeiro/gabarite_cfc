@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gabarite_board_cfc/src/shared/extension/extension_context.dart';
-import 'package:gabarite_board_cfc/src/theme/app_radius.dart';
-import 'package:gabarite_board_cfc/src/theme/app_spacing.dart';
-import 'package:gabarite_board_cfc/src/ui/buttons/app_button.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 class Dialogs {
   static Future<T?> showDialogAnimated<T>(

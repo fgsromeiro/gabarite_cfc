@@ -10,6 +10,7 @@ Future<void> setupDependencyInjector() async {
   final connectivity = Connectivity();
 
   dependencyInjector
+    
     ..registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(connectivity: connectivity))
     ..registerLazySingleton<NetworkVerifier>(() => NetworkVerifier(networkInfo: dependencyInjector()))
     ..registerLazySingleton<StorageService>(() => StorageServiceImpl(instance: sharedPreferences))

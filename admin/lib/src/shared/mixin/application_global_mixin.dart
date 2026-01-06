@@ -1,6 +1,19 @@
 import '../export/app_export.dart';
 
 mixin ApplicationGlobalMixin {
+  List<TBL0003> listByFilter(List<TBL0003> questions, FilterQuestion filter) {
+    List<TBL0003> result = [];
+
+    if (filter == FilterQuestion.all) {
+      result = questions;
+    } else if (filter == FilterQuestion.answered) {
+      result = questions.where((q) => q.isFilled).toList();
+    } else if (filter == FilterQuestion.notAnswered) {
+      result = questions.where((q) => !q.isFilled).toList();
+    }
+    return result;
+  }
+
   TBL0001? getNoteReference(List<TBL0001> listOfNote) {
     if (listOfNote.any(
       (n) => n.isReference,
@@ -151,6 +164,8 @@ mixin ApplicationGlobalMixin {
     List<TBL0003> questions,
     String value,
   ) {
+    if (questions.isEmpty) return [];
+
     final list = questions.where((e) => e.index == int.parse(value)).toList();
 
     return list;

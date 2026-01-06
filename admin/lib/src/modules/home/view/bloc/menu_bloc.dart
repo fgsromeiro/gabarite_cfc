@@ -19,7 +19,7 @@ class MenuBloc extends Cubit<MenuState> with ApplicationGlobalMixin {
           value: result.id,
           table: SupabaseUtils.kTBL0004,
           data: {},
-          column: 'user_id',
+          column: 'user',
         ),
       );
 

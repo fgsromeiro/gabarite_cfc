@@ -1,17 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/models/question.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/bloc/panel_bloc.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/bloc/panel_state.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/widgets/panel_template_item_recurse.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/widgets/panel_template_note.dart';
-import 'package:gabarite_board_cfc/src/shared/extension/extension_context.dart';
-import 'package:gabarite_board_cfc/src/shared/utils/utils.dart';
-import 'package:gabarite_board_cfc/src/theme/app_insets.dart';
-import 'package:gabarite_board_cfc/src/theme/app_spacing.dart';
-import 'package:gabarite_board_cfc/src/ui/buttons/app_button.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 class PanelBody extends StatefulWidget {
   const PanelBody({

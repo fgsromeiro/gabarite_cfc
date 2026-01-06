@@ -1,6 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:gabarite_board_cfc/src/modules/panel/data/panel_remote_data_source.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/models/question.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 abstract class PanelService {
   Future<List<Question>> findAllQuestions();
@@ -10,11 +8,9 @@ abstract class PanelService {
 }
 
 class PanelServiceImpl implements PanelService {
-  final PanelRemoteDataSource repository;
+  final PanelRepository repository;
 
-  PanelServiceImpl({
-    required this.repository,
-  });
+  PanelServiceImpl({required this.repository});
 
   @override
   Future<List<Question>> findAllQuestions() async {

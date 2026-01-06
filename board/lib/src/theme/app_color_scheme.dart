@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gabarite_board_cfc/src/theme/app_colors.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 class AppColorSchema {
   static ColorScheme get ligth => ColorScheme(

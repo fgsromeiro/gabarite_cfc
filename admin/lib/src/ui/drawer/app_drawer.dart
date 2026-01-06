@@ -67,29 +67,25 @@ class AppDrawer extends StatelessWidget {
                 },
                 title: 'Vincular Cadernos',
                 icon: Icons.link,
-                enable: state.permission.isProducts || state.permission.isAdmin,
+                enable: !state.permission.isTeacher,
               ),
               MenuListTile(
                 isSelected: state.currentIndex == 2,
-                // onPressed: () => bloc.selectMenu(2),
-                onPressed: () {
-                  bloc.selectMenu(2);
-                  Navigator.pushReplacementNamed(context, AppRoutesSchema.competitorSmScreen);
-                },
+                onPressed: () =>
+                  Navigator.pushReplacementNamed(context, AppRoutesSchema.competitorSmScreen),
                 title: 'Analisar Concorrentes',
                 icon: Icons.search,
-                enable: state.permission.isProducts || state.permission.isAdmin,
+                enable: !state.permission.isTeacher,
               ),
               MenuListTile(
                 isSelected: state.currentIndex == 3,
-                // onPressed: () => bloc.selectMenu(3),
                 onPressed: () {
                   bloc.selectMenu(3);
                   Navigator.pushReplacementNamed(context, AppRoutesSchema.visibilitySmScreen);
                 },
                 title: 'Exibição',
                 icon: Icons.visibility_outlined,
-                enable: state.permission.isAdmin || !state.permission.isProducts,
+                enable: state.permission.isAdmin || state.permission.isTeacher || state.permission.isModerator,
               ),
               MenuListTile(
                 isSelected: state.currentIndex == 4,
@@ -101,15 +97,6 @@ class AppDrawer extends StatelessWidget {
                 icon: Icons.settings,
                 enable: state.permission.isAdmin,
               ), // AppListTileDrawer(
-              //   icon: Icons.home,
-              //   text: 'Início',
-              //   onPressed: () => Navigator.pushReplacementNamed(
-              //     context,
-              //     AppRoutesSchema.homeScreen,
-              //   ),
-              // ),
-              // ...listOfListTile,
-              // ...listOfExpansionTile ?? [],
             ],
           );
         },

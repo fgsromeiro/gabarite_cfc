@@ -15,6 +15,7 @@ class BoardState extends Equatable {
   final int indexJump;
   final List<TBL0003> listOfQuestionsAll;
   final List<TBL0003> listFiltered;
+  final FilterQuestion filterBy;
   final String? message;
 
   const BoardState({
@@ -22,6 +23,7 @@ class BoardState extends Equatable {
     required this.indexJump,
     required this.listOfQuestionsAll,
     required this.listFiltered,
+    required this.filterBy,
     this.message,
   });
 
@@ -29,6 +31,7 @@ class BoardState extends Equatable {
 
   factory BoardState.initial() => BoardState(
         status: BoardStatus.initial,
+        filterBy: FilterQuestion.all,
         indexJump: 0,
         listFiltered: [],
         listOfQuestionsAll: [],
@@ -39,11 +42,13 @@ class BoardState extends Equatable {
     int? indexJump,
     List<TBL0003>? listOfQuestionsAll,
     List<TBL0003>? listFiltered,
+    FilterQuestion? filterBy,
     String? message,
   }) {
     return BoardState(
       status: status ?? this.status,
       indexJump: indexJump ?? this.indexJump,
+      filterBy: filterBy ?? this.filterBy,
       listOfQuestionsAll: listOfQuestionsAll ?? this.listOfQuestionsAll,
       listFiltered: listFiltered ?? this.listFiltered,
       message: message ?? this.message,
@@ -51,5 +56,5 @@ class BoardState extends Equatable {
   }
 
   @override
-  List<Object?> get props => [status, indexJump, listOfQuestionsAll, listFiltered, message];
+  List<Object?> get props => [status, indexJump, listOfQuestionsAll, listFiltered, message, filterBy];
 }

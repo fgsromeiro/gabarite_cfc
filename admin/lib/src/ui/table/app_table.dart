@@ -83,34 +83,41 @@ class _AppTableState extends State<AppTable> {
         ),
         Container(
           decoration: BoxDecoration(color: context.colorScheme.surface),
-          child: Scrollbar(
-            controller: _scrollControllerHorizontal2,
-            trackVisibility: true,
-            thumbVisibility: true,
-            scrollbarOrientation: ScrollbarOrientation.top,
-            child: NotificationListener<ScrollNotification>(
-              onNotification: (notification) {
-                if (!_isSyncing &&
-                    notification is ScrollUpdateNotification &&
-                    notification.metrics.axis == Axis.horizontal) {
-                  _isSyncing = true;
-                  WidgetsBinding.instance.addPostFrameCallback((_) {
-                    if (_scrollControllerHorizontal.hasClients) {
-                      _scrollControllerHorizontal.jumpTo(notification.metrics.pixels);
-                    }
-                    _isSyncing = false;
-                  });
-                }
-                return false;
-              },
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                controller: _scrollControllerHorizontal2,
-                child: RepaintBoundary(
-                  child: DataTable(
-                    dataRowMaxHeight: context.sz.height * 0.1,
-                    columns: widget.columns,
-                    rows: [],
+          child: Theme(
+            data: Theme.of(context).copyWith(
+              scrollbarTheme: ScrollbarThemeData(
+                thumbColor: WidgetStatePropertyAll(context.colorScheme.onSecondaryFixedVariant),
+              ),
+            ),
+            child: Scrollbar(
+              controller: _scrollControllerHorizontal2,
+              trackVisibility: true,
+              thumbVisibility: true,
+              scrollbarOrientation: ScrollbarOrientation.top,
+              child: NotificationListener<ScrollNotification>(
+                onNotification: (notification) {
+                  if (!_isSyncing &&
+                      notification is ScrollUpdateNotification &&
+                      notification.metrics.axis == Axis.horizontal) {
+                    _isSyncing = true;
+                    WidgetsBinding.instance.addPostFrameCallback((_) {
+                      if (_scrollControllerHorizontal.hasClients) {
+                        _scrollControllerHorizontal.jumpTo(notification.metrics.pixels);
+                      }
+                      _isSyncing = false;
+                    });
+                  }
+                  return false;
+                },
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  controller: _scrollControllerHorizontal2,
+                  child: RepaintBoundary(
+                    child: DataTable(
+                      dataRowMaxHeight: context.sz.height * 0.1,
+                      columns: widget.columns,
+                      rows: [],
+                    ),
                   ),
                 ),
               ),

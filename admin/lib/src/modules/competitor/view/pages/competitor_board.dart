@@ -14,7 +14,7 @@ class CompetitorBoard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           spacing: AppSpacing.med,
           children: [
-            AppBarContainer(),
+            AppBarContainer(showBackButton: true),
             AppContent(
               child: Column(
                 spacing: AppSpacing.med,

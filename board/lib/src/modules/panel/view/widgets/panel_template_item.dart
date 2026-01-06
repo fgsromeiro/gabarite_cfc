@@ -1,9 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:flutter/material.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/models/question.dart';
-import 'package:gabarite_board_cfc/src/modules/panel/view/widgets/panel_mixin.dart';
-import 'package:gabarite_board_cfc/src/shared/extension/extension_context.dart';
-import 'package:gabarite_board_cfc/src/theme/app_fonts.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 class PanelTemplateItem extends StatelessWidget with PanelMixin {
   const PanelTemplateItem({

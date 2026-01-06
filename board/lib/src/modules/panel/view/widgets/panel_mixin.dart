@@ -1,7 +1,4 @@
-import 'dart:ui';
-
-import 'package:gabarite_board_cfc/src/modules/panel/models/question.dart';
-import 'package:gabarite_board_cfc/src/theme/app_colors.dart';
+import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 
 mixin PanelMixin {
   String buildAlternative(String value) {
