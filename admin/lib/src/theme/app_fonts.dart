@@ -1,4 +1,4 @@
 class AppFonts {
-  static const String stem = "Stem";
-  static const String stemLight = "Stem Light";
+  static const String roboto = "Roboto";
+  static const String robotoLight = "Roboto Light";
 }

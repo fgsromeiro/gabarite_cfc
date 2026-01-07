@@ -3,11 +3,11 @@ import '../shared/export/app_export.dart';
 class AppTextStyle {
   static TextStyle stem = TextStyle(
     color: AppColors.white,
-    fontFamily: AppFonts.stem,
+    fontFamily: AppFonts.roboto,
   );
 
   static TextStyle stemLigth = TextStyle(
-    fontFamily: AppFonts.stemLight,
+    fontFamily: AppFonts.robotoLight,
     color: AppColors.white,
     height: 1,
   );

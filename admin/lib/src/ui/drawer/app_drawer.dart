@@ -28,14 +28,14 @@ class AppDrawer extends StatelessWidget {
                     state.user.name.isEmpty ? 'Olá, Usuário!' : 'Olá, ${state.user.name}!',
                     style: context.theme.textTheme.titleMedium!.copyWith(
                       color: context.colorScheme.onTertiary,
-                      fontFamily: AppFonts.stemLight,
+                      fontFamily: AppFonts.robotoLight,
                     ),
                   ),
                   accountEmail: Text(
                     state.user.email.isEmpty ? '' : state.user.email,
                     style: context.theme.textTheme.labelMedium!.copyWith(
                       color: context.colorScheme.onTertiary,
-                      fontFamily: AppFonts.stemLight,
+                      fontFamily: AppFonts.robotoLight,
                     ),
                   ),
                   currentAccountPictureSize: Size(

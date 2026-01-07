@@ -8,7 +8,7 @@ class AppTheme {
         centerTitle: true,
         iconTheme: const IconThemeData(color: AppColors.secondary),
       ),
-      fontFamily: AppFonts.stem,
+      fontFamily: AppFonts.robotoLight,
       colorScheme: AppColorSchema.ligth,
       datePickerTheme: DatePickerThemeData(
         todayBackgroundColor: WidgetStatePropertyAll(AppColors.secondary),
@@ -37,7 +37,7 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         hintStyle: AppTextStyle.titleMedium.copyWith(
           color: AppColors.blue400,
-          fontFamily: AppFonts.stemLight,
+          fontFamily: AppFonts.robotoLight,
         ),
         errorStyle: AppTextStyle.caption.copyWith(
           color: AppColors.errorPrimary,
