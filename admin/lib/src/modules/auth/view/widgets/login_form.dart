@@ -148,9 +148,6 @@ class _LoginFormState extends State<LoginForm> {
               child: AppButton(
                 title: 'ACESSAR',
                 isLoading: state.status.isLogging,
-                backgroundColor: context.colorScheme.secondary,
-                borderColor: context.colorScheme.secondary,
-                titleColor: context.colorScheme.primary,
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     final state = context.read<AuthFormBloc>().state;

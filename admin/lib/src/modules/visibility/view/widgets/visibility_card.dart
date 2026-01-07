@@ -25,10 +25,9 @@ class VisibilityCard extends StatelessWidget with ApplicationGlobalMixin {
               vertical: context.sz.height * 0.04,
             ),
             decoration: BoxDecoration(
-              color: visibility.isVisible ? context.colorScheme.secondary.withValues(alpha: 230) : null,
+              color: visibility.isVisible ? context.colorScheme.primary.withValues(alpha: 230) : null,
               border: Border.all(
-                color:
-                    visibility.isVisible ? context.colorScheme.secondary : context.colorScheme.onSecondaryFixedVariant,
+                color: visibility.isVisible ? context.colorScheme.primary : context.colorScheme.onSecondaryFixedVariant,
                 width: 1,
               ),
               borderRadius: BorderRadius.circular(AppRadius.lg),

@@ -7,8 +7,8 @@ class AppBarSimple extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Image.asset(
-        ImageConstants.logoCorrecao,
-        scale: AppIconSizes.iconSm,
+        ImageConstants.logoGabariteCFCExtends,
+        scale: AppIconSizes.iconXs,
       ),
       actionsPadding: EdgeInsets.only(right: AppInsets.med),
       actions: [
@@ -17,7 +17,7 @@ class AppBarSimple extends StatelessWidget implements PreferredSizeWidget {
             return Container(
               padding: EdgeInsets.all(AppInsets.xs),
               decoration: BoxDecoration(
-                color: context.colorScheme.secondary.withAlpha(40),
+                color: context.colorScheme.primary.withAlpha(40),
                 borderRadius: BorderRadius.circular(AppRadius.full),
               ),
               child: Row(

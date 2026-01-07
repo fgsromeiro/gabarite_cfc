@@ -274,9 +274,6 @@ class _RegisterFormState extends State<RegisterForm> {
                     child: AppButton(
                       title: 'CADASTRAR',
                       isLoading: state.status.isRegistering,
-                      backgroundColor: context.colorScheme.secondary,
-                      borderColor: context.colorScheme.secondary,
-                      titleColor: context.colorScheme.primary,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           final state = context.read<AuthFormBloc>().state;

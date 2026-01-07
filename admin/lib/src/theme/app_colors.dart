@@ -1,9 +1,10 @@
 import '../shared/export/app_export.dart';
 
 class AppColors {
-  static const Color primary = Color(0xff212D51);
-  static const Color secondary = Color(0xffFF9B35);
-  static const Color background = Color(0xff020817);
+  static const Color primary = Color(0xff739cf6);
+  static const Color primaryFixed = Color(0xff212D51);
+  static const Color secondary = Color(0xffe0e0e0);
+  static const Color background = Color(0xff120134);
   static const Color error = Color(0xffE50F0F);
   static const Color errorPrimary = Color.fromARGB(255, 236, 70, 70);
   static const Color errorLigth = Color(0xffffcccc);

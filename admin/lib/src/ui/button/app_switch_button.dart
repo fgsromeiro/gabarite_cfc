@@ -15,14 +15,14 @@ class AppSwitchButton extends StatelessWidget {
     return Switch(
       value: active,
       onChanged: onChanged,
-      activeColor: context.colorScheme.secondary,
-      activeTrackColor: context.colorScheme.secondary,
+      activeColor: context.colorScheme.primary,
+      activeTrackColor: context.colorScheme.primary,
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       trackOutlineWidth: WidgetStatePropertyAll(2),
       trackColor: WidgetStatePropertyAll(
-          active ? context.colorScheme.secondary.withValues(alpha: 0.2) : context.colorScheme.surface),
+          active ? context.colorScheme.primary.withValues(alpha: 0.2) : context.colorScheme.surface),
       trackOutlineColor: WidgetStatePropertyAll(
-        active ? context.colorScheme.secondary : context.colorScheme.onSecondaryFixedVariant,
+        active ? context.colorScheme.primary : context.colorScheme.onSecondaryFixedVariant,
       ),
     );
   }

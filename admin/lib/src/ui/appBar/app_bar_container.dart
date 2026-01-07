@@ -22,8 +22,8 @@ class AppBarContainer extends StatelessWidget {
               tooltipMessage: 'Voltar à página anterior',
             ),
           Image.asset(
-            ImageConstants.logoCorrecao,
-            scale: 12,
+            ImageConstants.logoGabariteCFCExtends,
+            // scale: 12,
           ),
           Expanded(
             child: Align(
@@ -42,7 +42,7 @@ class AppBarContainer extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.all(AppInsets.sm),
                         decoration: BoxDecoration(
-                          color: context.colorScheme.secondary.withAlpha(40),
+                          color: context.colorScheme.primary.withAlpha(60),
                           borderRadius: BorderRadius.circular(AppRadius.full),
                         ),
                         child: Row(

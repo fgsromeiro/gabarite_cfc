@@ -44,7 +44,7 @@ class AppDrawer extends StatelessWidget {
                   ),
                   currentAccountPicture: CircleAvatar(
                     backgroundColor: context.colorScheme.secondary,
-                    backgroundImage: const AssetImage(ImageConstants.logo),
+                    backgroundImage: const AssetImage(ImageConstants.profile),
                   ),
                   decoration: BoxDecoration(color: context.colorScheme.surface),
                 ),
@@ -71,8 +71,7 @@ class AppDrawer extends StatelessWidget {
               ),
               MenuListTile(
                 isSelected: state.currentIndex == 2,
-                onPressed: () =>
-                  Navigator.pushReplacementNamed(context, AppRoutesSchema.competitorSmScreen),
+                onPressed: () => Navigator.pushReplacementNamed(context, AppRoutesSchema.competitorSmScreen),
                 title: 'Analisar Concorrentes',
                 icon: Icons.search,
                 enable: !state.permission.isTeacher,

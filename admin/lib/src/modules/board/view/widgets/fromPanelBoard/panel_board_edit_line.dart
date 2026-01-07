@@ -43,7 +43,7 @@ class PanelBoardEditLine extends StatelessWidget with ApplicationGlobalMixin {
             width: double.infinity,
             padding: EdgeInsets.all(AppInsets.med),
             decoration: BoxDecoration(
-              color: isHovered ? context.colorScheme.scrim.withAlpha(55) : null,
+              color: isHovered ? context.colorScheme.primary.withAlpha(40) : null,
               border: Border.all(
                   color:
                       question.isFilled ? context.colorScheme.onPrimary : context.colorScheme.onSecondaryFixedVariant),

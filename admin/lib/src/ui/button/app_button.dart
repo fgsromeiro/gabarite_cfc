@@ -8,11 +8,11 @@ class AppButton extends StatelessWidget {
     required this.onPressed,
     required this.isLoading,
     this.tooltipMessage,
-    this.backgroundColor,
-    this.borderColor,
-    this.titleColor,
+    this.backgroundColor = AppColors.primary,
+    this.borderColor = AppColors.primary,
+    this.titleColor = AppColors.primaryFixed,
     this.icon,
-    this.overlayColor,
+    this.overlayColor = AppColors.secondary,
   });
 
   final String title;
@@ -41,7 +41,7 @@ class AppButton extends StatelessWidget {
                 backgroundColor: WidgetStatePropertyAll(isHovering ? overlayColor : backgroundColor),
                 shape: WidgetStatePropertyAll(
                   RoundedRectangleBorder(
-                    side: BorderSide(color: isHovering ? Colors.transparent : borderColor ?? Colors.transparent),
+                    side: BorderSide(color: borderColor ?? Colors.transparent),
                     borderRadius: BorderRadius.circular(AppRadius.lg),
                   ),
                 ),
@@ -64,7 +64,7 @@ class AppButton extends StatelessWidget {
                       title.toUpperCase(),
                       style: context.theme.textTheme.labelMedium!.copyWith(
                         fontWeight: FontWeight.bold,
-                        color: isHovering ? backgroundColor : titleColor,
+                        color: titleColor,
                       ),
                     ),
                     if (icon != null)

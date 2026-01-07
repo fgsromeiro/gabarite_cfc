@@ -3,6 +3,7 @@ import '../shared/export/app_export.dart';
 class AppColorSchema {
   static ColorScheme get ligth => ColorScheme(
         primary: AppColors.primary,
+        primaryFixed: AppColors.primaryFixed,
         secondary: AppColors.secondary,
         surface: AppColors.background,
         error: const Color.fromARGB(255, 209, 57, 57),

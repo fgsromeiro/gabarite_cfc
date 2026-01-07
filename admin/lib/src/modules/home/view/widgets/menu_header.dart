@@ -29,7 +29,7 @@ class MenuHeader extends StatelessWidget {
                   borderRadius: BorderRadius.circular(AppRadius.md),
                   image: DecorationImage(
                     image: AssetImage(
-                      ImageConstants.logo,
+                      ImageConstants.profile,
                     ),
                   ),
                 ),

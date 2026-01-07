@@ -76,7 +76,7 @@ class _MenuListTileState extends State<MenuListTile> {
     required bool isSelected,
     required bool isHovered,
   }) {
-    if (isSelected || isHovered) return context.colorScheme.scrim.withAlpha(55);
+    if (isSelected || isHovered) return context.colorScheme.primary.withAlpha(40);
 
     return AppColors.transparent;
   }

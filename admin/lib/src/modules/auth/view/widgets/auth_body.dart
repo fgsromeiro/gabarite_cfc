@@ -55,7 +55,7 @@ class _AuthBodyState extends State<AuthBody> {
                 child: Column(
                   children: [
                     Row(
-                      children: [Image.asset(ImageConstants.logoCorrecao, scale: AppBannerSize.logoXl + 5)],
+                      children: [Image.asset(ImageConstants.logoGabariteCFCExtends, scale: AppBannerSize.logoLg)],
                     ),
                     Expanded(
                       child: Container(
@@ -158,7 +158,6 @@ class _AuthBodyState extends State<AuthBody> {
                   alignment: Alignment.center,
                   child: Image.asset(
                     ImageConstants.bannerLogin,
-                    scale: AppBannerSize.logoLg,
                   ),
                 ),
               ),
