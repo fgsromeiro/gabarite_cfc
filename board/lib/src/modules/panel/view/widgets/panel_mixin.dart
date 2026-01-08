@@ -25,10 +25,6 @@ mixin PanelMixin {
   }
 
   Color buildAlternativeBorderColor(TypeNote type) {
-    if (type == TypeNote.typeTwo) return const Color.fromARGB(255, 42, 73, 104);
-    if (type == TypeNote.typeTree) return const Color.fromARGB(255, 163, 123, 42);
-    if (type == TypeNote.typeFour) return const Color.fromARGB(255, 91, 122, 91);
-
     return AppColors.primary;
   }
 

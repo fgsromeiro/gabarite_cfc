@@ -3,11 +3,6 @@ import 'package:gabarite_board_cfc/src/shared/export/app_export.dart';
 class AppTheme {
   static ThemeData get ligth => ThemeData(
         scaffoldBackgroundColor: AppColors.background,
-        appBarTheme: AppBarTheme(
-          elevation: 0,
-          centerTitle: true,
-          iconTheme: const IconThemeData(color: AppColors.secondary),
-        ),
         fontFamily: AppFonts.stem,
         colorScheme: AppColorSchema.ligth,
         textTheme: TextTheme(

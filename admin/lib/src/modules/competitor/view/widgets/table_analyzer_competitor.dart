@@ -17,12 +17,12 @@ class TableAnalyzerCompetitor extends StatelessWidget {
           width: double.infinity,
           columns: [
             AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'QUESTÃO'),
-            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'CF'),
             AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'OFICIAL'),
-            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'PAPIRO'),
-            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'GRAN CURSOS'),
-            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'OSWALDO'),
-            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'ESTRATÉGIA'),
+            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'ATUAL'),
+            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'C1'),
+            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'C2'),
+            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'C3'),
+            AppColumnCellTable.create(context, columnWidth: config.columnWidth, title: 'C4'),
           ],
           rows: [
             ...competitors.map(
@@ -31,10 +31,6 @@ class TableAnalyzerCompetitor extends StatelessWidget {
                   AppRowCellTable.create(
                     context,
                     title: '${c.index}',
-                  ),
-                  AppRowCellTable.create(
-                    context,
-                    title: c.cf,
                   ),
                   AppRowCellTable.field(
                     context,
@@ -45,39 +41,43 @@ class TableAnalyzerCompetitor extends StatelessWidget {
                       bloc.update(c);
                     },
                   ),
+                  AppRowCellTable.create(
+                    context,
+                    title: c.atual,
+                  ),
                   AppRowCellTable.field(
                     context,
-                    title: c.papiro,
+                    title: c.c1,
                     fator: config.fatorScaleField,
                     onChanged: (value) {
-                      c.setPapiro(value);
+                      c.setC1(value);
                       bloc.update(c);
                     },
                   ),
                   AppRowCellTable.field(
                     context,
-                    title: c.granCursos,
+                    title: c.c2,
                     fator: config.fatorScaleField,
                     onChanged: (value) {
-                      c.setGranCursos(value);
+                      c.setC2(value);
                       bloc.update(c);
                     },
                   ),
                   AppRowCellTable.field(
                     context,
-                    title: c.oswaldo,
+                    title: c.c3,
                     fator: config.fatorScaleField,
                     onChanged: (value) {
-                      c.setOswaldo(value);
+                      c.setC3(value);
                       bloc.update(c);
                     },
                   ),
                   AppRowCellTable.field(
                     context,
-                    title: c.estrategia,
+                    title: c.c4,
                     fator: config.fatorScaleField,
                     onChanged: (value) {
-                      c.setEstrategia(value);
+                      c.setC4(value);
                       bloc.update(c);
                     },
                   ),
@@ -91,9 +91,9 @@ class TableAnalyzerCompetitor extends StatelessWidget {
   }
 
   Color? _validateWithColorRow(BuildContext context, {required TBL0006 competitor}) {
-    if (competitor.cf.isNotEmpty && competitor.validate) {
+    if (competitor.atual.isNotEmpty && competitor.validate) {
       return context.colorScheme.onPrimary.withAlpha(40);
-    } else if (competitor.cf.isNotEmpty && competitor.isNotEmptyAll) {
+    } else if (competitor.atual.isNotEmpty && competitor.isNotEmptyAll) {
       return context.colorScheme.error.withAlpha(40);
     }
 

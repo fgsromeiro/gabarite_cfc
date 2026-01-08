@@ -71,7 +71,7 @@ class _PanelBodyState extends State<PanelBody> {
                         child: RepaintBoundary(
                           key: _globalKeyPanel3,
                           child: PanelTemplateNote(
-                            backgroundColor: context.colorScheme.tertiary,
+                            backgroundColor: context.colorScheme.secondary,
                             title: 'TIPO 3',
                             questions: Utils.filterList(typeNote: TypeNote.typeTree, questions: widget.questions),
                             typeNote: TypeNote.typeTree,
@@ -82,7 +82,7 @@ class _PanelBodyState extends State<PanelBody> {
                           child: RepaintBoundary(
                         key: _globalKeyPanel4,
                         child: PanelTemplateNote(
-                          backgroundColor: context.colorScheme.outline,
+                          backgroundColor: context.colorScheme.secondary,
                           title: 'TIPO 4',
                           questions: Utils.filterList(typeNote: TypeNote.typeFour, questions: widget.questions),
                           typeNote: TypeNote.typeFour,

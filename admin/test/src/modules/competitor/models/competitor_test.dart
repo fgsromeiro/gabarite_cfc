@@ -10,12 +10,12 @@ void main() {
   TBL0006 createBaseCompetitor() {
     return TBL0006(
       id: baseCompetitorData['id'] as String,
-      cf: baseCompetitorData['cf'] as String,
+      atual: baseCompetitorData['cf'] as String,
       official: baseCompetitorData['official'] as String,
-      papiro: baseCompetitorData['papiro'] as String,
-      granCursos: baseCompetitorData['grancursos'] as String,
-      oswaldo: baseCompetitorData['oswaldo'] as String,
-      estrategia: baseCompetitorData['estrategia'] as String,
+      c1: baseCompetitorData['papiro'] as String,
+      c2: baseCompetitorData['grancursos'] as String,
+      c3: baseCompetitorData['oswaldo'] as String,
+      c4: baseCompetitorData['estrategia'] as String,
       idNote: baseCompetitorData['idnote'] as String,
       index: baseCompetitorData['index'] as int,
     );
@@ -30,8 +30,8 @@ void main() {
     test('should create an instance with correct values', () {
       expect(competitor, isNotNull);
       expect(competitor.id, 'any_id');
-      expect(competitor.cf, 'A');
-      expect(competitor.papiro, 'A');
+      expect(competitor.atual, 'A');
+      expect(competitor.c1, 'A');
       expect(competitor.index, 1);
     });
 
@@ -46,12 +46,12 @@ void main() {
       final competitor1 = createBaseCompetitor();
       final competitor2 = TBL0006(
         id: 'any_other_id',
-        cf: baseCompetitorData['cf'] as String,
+        atual: baseCompetitorData['cf'] as String,
         official: baseCompetitorData['official'] as String,
-        papiro: baseCompetitorData['papiro'] as String,
-        granCursos: baseCompetitorData['grancursos'] as String,
-        oswaldo: baseCompetitorData['oswaldo'] as String,
-        estrategia: baseCompetitorData['estrategia'] as String,
+        c1: baseCompetitorData['papiro'] as String,
+        c2: baseCompetitorData['grancursos'] as String,
+        c3: baseCompetitorData['oswaldo'] as String,
+        c4: baseCompetitorData['estrategia'] as String,
         idNote: baseCompetitorData['idnote'] as String,
         index: baseCompetitorData['index'] as int,
       );
@@ -63,25 +63,25 @@ void main() {
   group('Competitor - Setters Tests', () {
     test('should update the value of papiro correctly', () {
       const newValue = 'new_value';
-      competitor.setPapiro(newValue);
-      expect(competitor.papiro, newValue);
+      competitor.setC1(newValue);
+      expect(competitor.c1, newValue);
     });
 
     test('should update the value of granCursos correctly', () {
       const newValue = 'new_value';
-      competitor.setGranCursos(newValue);
-      expect(competitor.granCursos, newValue);
+      competitor.setC2(newValue);
+      expect(competitor.c2, newValue);
     });
     test('should update the value of estrategia correctly', () {
       const newValue = 'new_value';
-      competitor.setEstrategia(newValue);
-      expect(competitor.estrategia, newValue);
+      competitor.setC4(newValue);
+      expect(competitor.c4, newValue);
     });
 
     test('should update the value of oswaldo correctly', () {
       const newValue = 'new_value';
-      competitor.setOswaldo(newValue);
-      expect(competitor.oswaldo, newValue);
+      competitor.setC3(newValue);
+      expect(competitor.c3, newValue);
     });
   });
 
@@ -91,7 +91,7 @@ void main() {
     });
 
     test('should return false when papiro is different from cf', () {
-      competitor.setPapiro('any_other_value');
+      competitor.setC1('any_other_value');
       expect(competitor.validate, isFalse);
     });
 
@@ -100,7 +100,7 @@ void main() {
     });
 
     test('should return false when papiro is empty', () {
-      competitor.setPapiro('');
+      competitor.setC1('');
       expect(competitor.isNotEmptyAll, isFalse);
     });
   });
@@ -129,9 +129,9 @@ void main() {
       final competitor = TBL0006.fromMap(incompleteMap);
 
       expect(competitor.id, 'any_id');
-      expect(competitor.cf, '');
-      expect(competitor.papiro, '');
-      expect(competitor.granCursos, '');
+      expect(competitor.atual, '');
+      expect(competitor.c1, '');
+      expect(competitor.c2, '');
       expect(competitor.idNote, '');
       expect(competitor.index, 0);
     });
