@@ -2,7 +2,7 @@
 
 <div style="display: flex; align-items: center; flex-direction: row;">
     <p>O <strong>Gabarite CFC</strong> é um sistema desenvolvido para o gerenciamento das questões do Exame de Suficiência do CFC, permitindo a criação de relações entre questões correlatas, análise do gabarito dos concorrentes e a organização dos dados para apresentação das respostas no painel.</p>
-    <img src="../mockup.png" alt="demo image" width="350" style="margin-left: 24px;"/>
+    <img src="./mockup.png" alt="demo image" width="350" style="margin-left: 24px;"/>
 </div>
 
 <h2>Começando</h2>
@@ -85,11 +85,11 @@ flutter run
 <details>
   <summary><strong>DIAGRAMA ER (Entidade-Relacionamento)</strong></summary>
 <br>
- <img src="../diagram.png" alt="ER Diagram" width="600"/>
+ <img src="./diagram.png" alt="ER Diagram" width="600"/>
 
 </details>
 
 <h2>Licença</h2>
 
 <p>
-    Este projeto está licenciado sob a Licença MIT - veja o arquivo <a href="../LICENSE">LICENSE</a> para mais detalhes.
+    Este projeto está licenciado sob a Licença MIT - veja o arquivo <a href="./LICENSE">LICENSE</a> para mais detalhes.
